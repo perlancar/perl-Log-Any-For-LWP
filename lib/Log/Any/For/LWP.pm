@@ -77,8 +77,17 @@ Sample script and output:
  ...
 
 
+=head1 DESCRIPTION
+
+This module just bundles L<Net::HTTP::Methods::patch::log_request> and
+L<LWP::UserAgent::patch::log_response> together.
+
+Response body is dumped to a separate category. It is recommended that you dump
+this to a directory, for convenience. See the documentation of
+L<LWP::UserAgent::patch::log_response> for more details.
+
+
 =head1 SEE ALSO
 
 L<Log::Any>
-
 
