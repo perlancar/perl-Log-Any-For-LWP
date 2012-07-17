@@ -46,8 +46,35 @@ sub unimport {
 
 Sample script and output:
 
- % TRACE=1 perl -MLog::Any::App -MLog::Any::For::LWP \
+ % TRACE=1 perl -MLog::Any::App -MLog::Any::For::LWP -MLWP::Simple \
    -e'get "http://www.google.com/"'
+ [36] HTTP request (proto=http, len=134):
+ GET / HTTP/1.1
+ TE: deflate,gzip;q=0.3
+ Connection: TE, close
+ Host: www.google.com
+ User-Agent: LWP::Simple/6.00 libwww-perl/6.04
+
+ [79] HTTP response header:
+ 302 Moved Temporarily
+ Cache-Control: private
+ Connection: close
+ Date: Tue, 17 Jul 2012 04:39:10 GMT
+ ...
+
+ [81] HTTP request (proto=http, len=136):
+ GET / HTTP/1.1
+ TE: deflate,gzip;q=0.3
+ Connection: TE, close
+ Host: www.google.co.id
+ User-Agent: LWP::Simple/6.00 libwww-perl/6.04
+
+ [190] HTTP response header:
+ 200 OK
+ Cache-Control: private, max-age=0
+ Connection: close
+ Date: Tue, 17 Jul 2012 04:39:10 GMT
+ ...
 
 
 =head1 SEE ALSO
