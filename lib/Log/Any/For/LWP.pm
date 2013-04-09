@@ -43,6 +43,8 @@ sub unimport {
 1;
 # ABSTRACT: Add logging to LWP
 
+=for Pod::Coverage ^(unimport)$
+
 =head1 SYNOPSIS
 
  use Log::Any::For::LWP
