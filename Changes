@@ -1,5 +1,12 @@
 Revision history for Log-Any-For-LWP
 
+0.06    2015-08-17 (PERLANCAR)
+
+	- No functional changes.
+
+	- Switch from Log::Any to Log::Any::IfLOG.
+
+
 0.05     2013-04-10 (SHARYANTO)
 
          - Pass -decode_response_body to LWP::UserAgent::Patch::LogResponse.
