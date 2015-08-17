@@ -1,11 +1,12 @@
 package Log::Any::For::LWP;
 
+# DATE
+# VERSION
+
 use 5.010001;
 use strict;
 use warnings;
-use Log::Any '$log';
-
-# VERSION
+use Log::Any::IfLOG '$log';
 
 use Net::HTTP::Methods::Patch::LogRequest    qw();
 use LWP::UserAgent::Patch::LogRequestContent qw();
@@ -104,4 +105,3 @@ L<LWP::UserAgent::Patch::LogResponse> for more details.
 =head1 SEE ALSO
 
 L<Log::Any>
-
